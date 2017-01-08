@@ -35,4 +35,4 @@ $ npm i
 * [SurviveJS - Webpack - v1.5.0](http://survivejs.com/blog/survivejs-webpack-150/)
 * [Modern React with Redux](https://www.udemy.com/react-redux/)
 * [Redux-in-russian (RUS)](https://github.com/rajdee/redux-in-russian)
-* [Автоматические тесты при помощи chai и mocha](https://learn.javascript.ru/testing)
+* [Автоматические тесты при помощи chai и mocha (RUS)](https://learn.javascript.ru/testing)
