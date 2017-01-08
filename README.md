@@ -4,6 +4,7 @@
 1. [Features](#features)
 1. [Install](#install)
 1. [List of commands](#list-of-commands)
+1. [Sources](#sources)
 
 ## Features
 * [react](https://github.com/facebook/react)
@@ -29,3 +30,9 @@ $ npm i
 |`serv`| Serves your application at `localhost:4000` with HMR.|
 |`test`|Runs unit tests with Mocha.|
 |`test:dev`|Runs Mocha and watches for changes to re-run tests.|
+
+## Sources
+* [SurviveJS - Webpack - v1.5.0](http://survivejs.com/blog/survivejs-webpack-150/)
+* [Modern React with Redux](https://www.udemy.com/react-redux/)
+* [Redux-in-russian (RUS)](https://github.com/rajdee/redux-in-russian)
+* [Автоматические тесты при помощи chai и mocha](https://learn.javascript.ru/testing)
