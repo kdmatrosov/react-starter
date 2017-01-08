@@ -2,7 +2,8 @@
 
 ## Table of Contents
 1. [Features](#features)
-1. [Install](#install )
+1. [Install](#install)
+1. [List of commands](#list-of-commands)
 
 ## Features
 * [react](https://github.com/facebook/react)
@@ -20,3 +21,11 @@ $ git clone https://github.com/kdmatrosov/react-starter.git <my-project-name>
 $ cd <my-project-name>
 $ npm i
 ```
+## List of commands
+
+|`npm run <script>`|Description|
+|------------------|-----------|
+|`production`| Builds your application to `build` folder.|
+|`serv`| Serves your application at `localhost:4000` with HMR.|
+|`test`|Runs unit tests with Mocha.|
+|`test:dev`|Runs Mocha and watches for changes to re-run tests.|
