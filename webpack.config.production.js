@@ -1,15 +1,16 @@
 const webpack = require('webpack');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const WebpackShellPlugin = require("webpack-shell-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: {
     'index': './src/index.js'
   },
   output: {
-    path: __dirname + '/bundle',
+    path: __dirname + '/build',
     publicPath: './',
     filename: '[name].js'
   },
-  devtool: 'cheap-inline-module-source-maps',
   module: {
     loaders: [{
       exclude: /node_modules/,
@@ -31,10 +32,24 @@ module.exports = {
   },
   plugins: [
     new webpack.NoErrorsPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
     new ExtractTextPlugin({filename: 'app.css'}),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'common'
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false,
+        drop_console: true,
+        unsafe: true
+      }
+    }),
+    new WebpackShellPlugin({
+      onBuildStart: ['echo "Webpack Start"'],
+      onBuildEnd: ['echo "Webpack End"']
+    }),
+    new HtmlWebpackPlugin({
+      cashe: true,
+      template: './webpack.config/index.html'
     })
   ],
   resolve: {
