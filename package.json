@@ -5,7 +5,7 @@
     "node": "6.9.3",
     "npm": "4.0.5"
   },
-  "description": "",
+  "description": "React, Redux, React-Router, Webpack 2, PostCss, Mocha + Chai",
   "scripts": {
     "production": "better-npm-run production",
     "serv": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
