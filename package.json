@@ -8,7 +8,7 @@
   "description": "React, Redux, React-Router, Webpack 2, PostCss, Mocha + Chai",
   "scripts": {
     "production": "better-npm-run production",
-    "serv": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "serv": "better-npm-run serv",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
     "test:watch": "npm run test -- --watch"
   },
@@ -17,6 +17,12 @@
       "command": "webpack -p --config webpack.config.production.js",
       "env": {
         "BABEL_ENV": "production"
+      }
+    },
+    "serv": {
+      "command": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+      "env": {
+        "NODE_ENV": "watch"
       }
     }
   },
@@ -66,6 +72,7 @@
     "jsdom": "^9.9.1",
     "mocha": "^3.2.0",
     "npm": "^4.0.5",
+    "path": "^0.12.7",
     "postcss": "^5.2.8",
     "postcss-cssnext": "^2.9.0",
     "postcss-import": "^9.0.0",

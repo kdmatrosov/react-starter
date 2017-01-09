@@ -1,8 +1,9 @@
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-module.exports = [{
-  exclude: /node_modules/,
-  loader: 'babel-loader',
-  query: {
+module.exports = [
+  {
+    exclude: /node_modules/,
+    loader: 'babel-loader',
+    query: {
       presets: ['react', 'es2015', 'stage-1']
     }
   },
@@ -15,4 +16,5 @@ module.exports = [{
   {
     test: /\.html$/,
     loader: 'html-loader'
-  }];
+  }
+];

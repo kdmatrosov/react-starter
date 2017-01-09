@@ -1,35 +1,44 @@
 const webpack = require('webpack');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const rules = require('./webpack.config/rules');
+const NODE_ENV = process.env.NODE_ENV || 'development';
+const path = require('path');
+console.log(`--${NODE_ENV}`);
 module.exports = {
   entry: {
     'index': './src/index.js'
   },
   output: {
     path: __dirname + '/bundle',
-    publicPath: './',
+    publicPath: '/',
     filename: '[name].js'
   },
   devtool: 'cheap-inline-module-source-maps',
+  watch: false,
+  watchOptions: {
+    aggregateTimeout: 100
+  },
   module: {
     rules: rules
   },
   plugins: [
-    new webpack.NoErrorsPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new ExtractTextPlugin({filename: 'app.css'}),
+    new webpack.NoErrorsPlugin(),
+    new ExtractTextPlugin({filename: 'app.css', allChunks: true}),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'common'
+    }),
+    new webpack.DefinePlugin({
+      NODE_ENV: JSON.stringify(NODE_ENV)
     })
   ],
   resolve: {
     extensions: ['.js', '.jsx']
   },
   devServer: {
-    historyApiFallback: true,
     port: 4000,
-    hot: true,
+    contentBase: './bundle',
     inline: true,
-    contentBase: './'
+    hot: true
   }
 };

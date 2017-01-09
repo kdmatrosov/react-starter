@@ -27,7 +27,7 @@ $ npm i
 |`npm run <script>`|Description|
 |------------------|-----------|
 |`production`| Builds your application to `build` folder.|
-|`serv`| Serves your application at `localhost:4000` with HMR.|
+|`serv`| Serves your application at `localhost:4000` with auto-rebuild.|
 |`test`|Runs unit tests with Mocha.|
 |`test:dev`|Runs Mocha and watches for changes to re-run tests.|
 
