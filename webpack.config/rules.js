@@ -7,8 +7,13 @@ module.exports = [
       presets: ['react', 'es2015', 'stage-1']
     }
   },
+ /* {
+
+    test: /\.scss$/,
+    loader: ExtractTextPlugin.extract('css-loader?importLoaders=1!postcss-loader!sass-loader')
+  }*/
   {
-    test: /\.css$/,
+    test: /\.scss$/,
     loader: ExtractTextPlugin.extract({
       fallbackLoader: 'style-loader',
       loader: [
@@ -20,6 +25,9 @@ module.exports = [
         },
         {
           loader: 'postcss-loader'
+        },
+        {
+          loader: 'sass-loader'
         }
       ]
     })
