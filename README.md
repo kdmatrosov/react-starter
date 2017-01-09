@@ -29,7 +29,7 @@ $ npm i
 |`production`| Builds your application to `build` folder.|
 |`serv`| Serves your application at `localhost:4000` with auto-rebuild.|
 |`test`|Runs unit tests with Mocha.|
-|`test:dev`|Runs Mocha and watches for changes to re-run tests.|
+|`test:watch`|Runs Mocha and watches for changes to re-run tests.|
 
 ## Sources
 * [SurviveJS - Webpack - v1.5.0](http://survivejs.com/blog/survivejs-webpack-150/)
