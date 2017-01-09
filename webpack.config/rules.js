@@ -1,17 +1,13 @@
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = [
   {
-    exclude: /node_modules/,
     loader: 'babel-loader',
+    test: /\.js$/,
+    exclude: /node_modules/,
     query: {
       presets: ['react', 'es2015', 'stage-1']
     }
   },
- /* {
-
-    test: /\.scss$/,
-    loader: ExtractTextPlugin.extract('css-loader?importLoaders=1!postcss-loader!sass-loader')
-  }*/
   {
     test: /\.scss$/,
     loader: ExtractTextPlugin.extract({
