@@ -9,8 +9,7 @@ import reducers from './reducers';
 import routes from './routes';
 
 import promise from 'redux-promise';
-
-import './styles/app.css';
+require('./styles/app.scss');
 
 const createStoreWithMiddleware = applyMiddleware(
     promise

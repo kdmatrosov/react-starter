@@ -9,8 +9,8 @@ class Test extends Component {
     render() {
         console.log(this.props);
         return (
-            <div>
-                    react starter
+            <div className="title">
+                react starter
             </div>
         );
     }
