@@ -14,7 +14,7 @@ module.exports = {
     filename: '[name].js'
   },
   devtool: 'cheap-inline-module-source-maps',
-  watch: false,
+  watch: NODE_ENV == 'watch',
   watchOptions: {
     aggregateTimeout: 100
   },
@@ -24,7 +24,7 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
-    new ExtractTextPlugin({filename: 'app.css', allChunks: true}),
+    new ExtractTextPlugin({filename: '[name].css', allChunks: true, disable: NODE_ENV == 'watch'}),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'common'
     }),
@@ -36,9 +36,10 @@ module.exports = {
     extensions: ['.js', '.jsx']
   },
   devServer: {
+    historyApiFallback: true,
     port: 4000,
     contentBase: './bundle',
     inline: true,
-    hot: true
+    hot: false
   }
 };

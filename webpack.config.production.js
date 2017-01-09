@@ -17,7 +17,7 @@ module.exports = {
   },
   plugins: [
     new webpack.NoErrorsPlugin(),
-    new ExtractTextPlugin({filename: 'app.css'}),
+    new ExtractTextPlugin({filename: '[name].css'}),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'common'
     }),
