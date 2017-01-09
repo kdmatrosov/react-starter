@@ -10,14 +10,14 @@ module.exports = {
   output: {
     path: __dirname + '/build',
     publicPath: './',
-    filename: '[name].js'
+    filename: '[name].[chunkhash].js'
   },
   module: {
     rules: rules
   },
   plugins: [
     new webpack.NoErrorsPlugin(),
-    new ExtractTextPlugin({filename: '[name].css'}),
+    new ExtractTextPlugin({filename: '[name].[chunkhash].css'}),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'common'
     }),
