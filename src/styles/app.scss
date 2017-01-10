@@ -1,3 +1,4 @@
+@import 'common-list.scss';
 body{
   background: #fafafa;
   margin: 0;
@@ -10,6 +11,7 @@ html{
   height: 100%;
   width: 100%;
 }
+
 .container{
   height: 100%;
   width: 100%;
@@ -26,9 +28,21 @@ html{
   --font-weight: 300;
   --line-height: 1.5;
   --font-size-header: 48px;
+  --font-size-header-active: 40px;
 }
 .title{
   font-family: var(--font-text);
   display: inline-block;
   font-size: var(--font-size-header);
+  user-select: none;
+  &:hover{
+    cursor: pointer;
+  }
+  &:active{
+    font-size: var(--font-size-header-active);
+  }
+}
+.photographers-container{
+  width: 300px;
+  max-height: 400px;
 }

@@ -1,15 +1,20 @@
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
 import {testAction} from '../actions/index';
 
 class Test extends Component {
+    static contextTypes = { //магия. в этом месте мы в context записывает роутер....
+        router: PropTypes.object
+    };
     componentWillMount() {
         this.props.testAction();
     }
+    handleClick(e){
+        this.context.router.push('/photographers');
+    }
     render() {
-        console.log(this.props);
         return (
-            <div className="title">
+            <div className="title" onClick={() => this.handleClick()}>
                 react starter
             </div>
         );
