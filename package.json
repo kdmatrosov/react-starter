@@ -9,6 +9,7 @@
   "scripts": {
     "production": "better-npm-run production",
     "serv": "better-npm-run serv",
+    "standard": "node ./node_modules/standard/bin/cmd.js ./src/** --fix",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
     "test:watch": "npm run test -- --watch"
   },
@@ -40,7 +41,7 @@
   "bugs": {
     "url": "https://github.com/kdmatrosov/react-starter/issues"
   },
-  "homepage": "https://github.com/kdmatrosov/react-starter#readme",
+  "homepage": "https://kdmatrosov.github.io/react-starter/",
   "dependencies": {
     "axios": "^0.15.3",
     "babel-preset-stage-1": "^6.16.0",
@@ -79,6 +80,7 @@
     "postcss-loader": "^1.2.1",
     "precss": "^1.4.0",
     "react-addons-test-utils": "^15.4.2",
+    "standard": "^8.6.0",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "^2.2.0-rc.3",
