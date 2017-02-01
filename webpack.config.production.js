@@ -16,7 +16,7 @@ module.exports = {
     rules: rules
   },
   plugins: [
-    new webpack.NoErrorsPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
     new ExtractTextPlugin({filename: '[name].[chunkhash].css'}),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'common'
