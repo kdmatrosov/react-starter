@@ -23,7 +23,7 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
     new ExtractTextPlugin({filename: '[name].css', allChunks: true, disable: NODE_ENV == 'watch'}),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'common'
