@@ -1,5 +1,5 @@
 # react-starter
-
+[![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 ## Table of Contents
 1. [Features](#features)
 1. [Install](#install)
