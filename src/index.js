@@ -4,7 +4,7 @@ import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
 
 import {Router, browserHistory} from 'react-router'
-// browserHistory говорит юраузеру, как интепритировать данный юрл
+// browserHistory говорит браузеру, как интепритировать данный юрл
 import reducers from './reducers'
 import routes from './routes'
 

@@ -1,13 +1,13 @@
 import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
-import {testAction} from '../actions/index';
+import {indexAction} from '../actions/index';
 
-class Test extends Component {
+class Index extends Component {
     static contextTypes = { //магия. в этом месте мы в context записывает роутер....
         router: PropTypes.object
     };
     componentWillMount() {
-        this.props.testAction();
+        this.props.indexAction();
     }
     handleClick(e){
         this.context.router.push('/photographers');
@@ -23,7 +23,7 @@ class Test extends Component {
 
 function mapStateToProps(state){
     return {
-        test: state.test.data
+        test: state.index.data
     }
 }
-export default connect(mapStateToProps, {testAction})(Test);
+export default connect(mapStateToProps, {indexAction})(Index);

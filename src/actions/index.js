@@ -1,9 +1,9 @@
 
-export const TEST_ACTION = 'TEST_ACTION';
-export function testAction()
+export const INDEX_ACTION = 'INDEX_ACTION';
+export function indexAction()
 {
   return {
-    type: TEST_ACTION,
+    type: INDEX_ACTION,
     payload: true
   };
 }
